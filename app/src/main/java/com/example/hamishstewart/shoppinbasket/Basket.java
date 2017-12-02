@@ -23,4 +23,7 @@ public class Basket {
     }
 
 
+    public void addItem(Buyable item) {
+        this.goods.add(item);
+    }
 }
