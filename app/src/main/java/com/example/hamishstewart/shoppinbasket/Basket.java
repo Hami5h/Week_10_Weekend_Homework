@@ -1,6 +1,7 @@
 package com.example.hamishstewart.shoppinbasket;
 
 import com.example.hamishstewart.shoppinbasket.Behaviours.Buyable;
+import com.example.hamishstewart.shoppinbasket.Products.Bread;
 
 import java.util.ArrayList;
 
@@ -45,13 +46,13 @@ public class Basket {
         return total;
     }
 
-//    public double totalCostWithBreadBogofDiscount() {
-//        double total = 0;
-//        for (Buyable item : goods) {
-//            int discount = item.totalCostPerItem();
-//            total += item.totalCostPerItem();
-//        }
-//        return total;
-//    }
+    public double totalCostWithBreadBogofDiscount() {
+        double total = 0;
+        for (Buyable item : goods) {
+            double cost = item.totalCostPerItem();
+            total += cost;
+        }
+        return total;
+    }
 
 }

@@ -32,11 +32,11 @@ public class ProductTest {
         assertEquals(1.90, bread.totalCostPerItem(), 0.01);
     }
 
-    @Test
-    public void getTotalCostWithBuyOneGetOneFreeDiscount() {
-        bread = new Bread("Hovis", 0.95, 11);
-        assertEquals(5.70, bread.totalCostPerItemWithDiscount(), 0.01);
-    }
+//    @Test
+//    public void getTotalCostWithBuyOneGetOneFreeDiscount() {
+//        bread = new Bread("Hovis", 0.95, 11);
+//        assertEquals(5.70, bread.totalCostPerItemWithDiscount(), 0.01);
+//    }
 
     @Test
     public void getTotalBogOfDiscountForOddNumber() {

@@ -23,7 +23,7 @@ public class BasketTest {
     @Before
     public void before(){
         basket = new Basket();
-        bread = new Bread("Hovis", 0.95, 2);
+        bread = new Bread("Hovis", 0.95, 3);
         milk = new Milk("Green", 1.30, 1);
         honey = new Honey("Solid", 3.20, 1);
     }
@@ -77,13 +77,13 @@ public class BasketTest {
         assertEquals(6.40, basket.totalCostBeforeDiscount(), 0.01);
     }
 
-//    @Test
-//    public void canGetTotalCostWithBreadBogofDiscount(){
-//        basket.addItem(bread);
-//        basket.addItem(milk);
-//        basket.addItem(honey);
-//        assertEquals(5.45, basket.totalCostWithBreadBogofDiscount(), 0.01);
-//    }
+    @Test
+    public void canGetTotalCostWithBreadBogofDiscount(){
+        basket.addItem(bread);
+        basket.addItem(milk);
+        basket.addItem(honey);
+        assertEquals(6.40, basket.totalCostWithBreadBogofDiscount(), 0.01);
+    }
 
 
 
