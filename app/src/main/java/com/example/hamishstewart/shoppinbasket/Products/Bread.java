@@ -14,14 +14,14 @@ public class Bread extends Product implements Buyable, Discountable {
         super(type, price, quantity);
     }
 
-
-    public double totalCostPerItemWithoutDiscount() {
+    @Override
+    public double totalCostPerItem() {
         double noDiscountCost = this.price * this.quantity;
         return noDiscountCost;
     }
 
-    @Override
-    public double totalCostPerItem() {
+
+    public double totalCostPerItemWithDiscount() {
 //        int x = this.quantity;
 //        double bogofCost = 0;
 //        if (x <= 1) {
@@ -30,7 +30,7 @@ public class Bread extends Product implements Buyable, Discountable {
 //            if (x >= 2) bogofCost = this.price * this.quantity / 2;
 //        }
 
-        return totalCostPerItemWithoutDiscount() - totalBogofDiscount();
+        return totalCostPerItem() - totalBogofDiscount();
     }
 
     @Override
