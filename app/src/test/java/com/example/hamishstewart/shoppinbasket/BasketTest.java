@@ -77,6 +77,14 @@ public class BasketTest {
         assertEquals(6.40, basket.totalCostBeforeDiscount(), 0.01);
     }
 
+//    @Test
+//    public void canGetTotalCostWithBreadBogofDiscount(){
+//        basket.addItem(bread);
+//        basket.addItem(milk);
+//        basket.addItem(honey);
+//        assertEquals(5.45, basket.totalCostWithBreadBogofDiscount(), 0.01);
+//    }
+
 
 
 }

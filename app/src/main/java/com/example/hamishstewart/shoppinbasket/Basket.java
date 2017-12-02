@@ -45,4 +45,13 @@ public class Basket {
         return total;
     }
 
+//    public double totalCostWithBreadBogofDiscount() {
+//        double total = 0;
+//        for (Buyable item : goods) {
+//            int discount = item.totalCostPerItem()
+//            total += item.totalCostPerItem();
+//        }
+//        return total;
+//    }
+
 }
