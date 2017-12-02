@@ -30,4 +30,9 @@ public class ProductTest {
     public void getTotalCostPerItem(){
         assertEquals(1.90, bread.totalCostPerItem(), 0.01);
     }
+
+    @Test
+    public void getBuyOneGetOneFreeDiscount() {
+        assertEquals(0.95, bread.totalCostPerItem(), 0.01);
+    }
 }
