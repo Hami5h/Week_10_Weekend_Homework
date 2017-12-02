@@ -9,16 +9,17 @@ import java.util.ArrayList;
  */
 
 public class Basket {
-    private String product;
-    private double price;
-    private int quantity;
-    private ArrayList<Buyable> item;
 
-    public Basket(String product, double price, int quantity) {
-        this.product = product;
-        this.price = price;
-        this.quantity = quantity;
-        this.item = new ArrayList<Buyable>();
+    private ArrayList<Buyable> goods;
+
+    public Basket() {
+
+        this.goods = new ArrayList<Buyable>();
+    }
+
+
+    public int itemCount() {
+        return this.goods.size();
     }
 
 
