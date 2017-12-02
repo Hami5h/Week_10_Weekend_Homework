@@ -30,4 +30,8 @@ public class Basket {
     public void removeItem(Buyable item) {
         this.goods.remove(item);
     }
+
+    public void emptyBasket() {
+        this.goods.clear();
+    }
 }

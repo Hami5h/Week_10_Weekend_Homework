@@ -59,6 +59,16 @@ public class BasketTest {
         assertEquals(0, basket.itemCount());
     }
 
+    @Test
+    public void canEmptyBasket(){
+        basket.addItem(bread);
+        basket.addItem(milk);
+        basket.addItem(honey);
+        assertEquals(3, basket.itemCount());
+        basket.emptyBasket();
+        assertEquals(0, basket.itemCount());
+    }
+
 
 
 }
