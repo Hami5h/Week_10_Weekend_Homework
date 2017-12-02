@@ -26,4 +26,8 @@ public class Basket {
     public void addItem(Buyable item) {
         this.goods.add(item);
     }
+
+    public void removeItem(Buyable item) {
+        this.goods.remove(item);
+    }
 }
