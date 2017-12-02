@@ -1,13 +1,15 @@
 package com.example.hamishstewart.shoppinbasket.Products;
 
+import com.example.hamishstewart.shoppinbasket.Behaviours.Buyable;
+
 /**
  * Created by hamishstewart on 02/12/2017.
  */
 
 public class Product {
     private String type;
-    private double price;
-    private int quantity;
+    double price;
+    int quantity;
 
     public Product(String type, double price, int quantity) {
         this.type = type;
@@ -26,4 +28,5 @@ public class Product {
     public int getQuantity() {
         return quantity;
     }
+
 }

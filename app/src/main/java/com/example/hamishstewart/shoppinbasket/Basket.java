@@ -12,9 +12,11 @@ public class Basket {
 
     private ArrayList<Buyable> goods;
 
+
     public Basket() {
 
         this.goods = new ArrayList<Buyable>();
+
     }
 
 
@@ -34,4 +36,13 @@ public class Basket {
     public void emptyBasket() {
         this.goods.clear();
     }
+
+    public double totalCostBeforeDiscount() {
+        double total = 0;
+        for (Buyable item : goods) {
+            total += item.totalCostPerItem();
+        }
+        return total;
+    }
+
 }

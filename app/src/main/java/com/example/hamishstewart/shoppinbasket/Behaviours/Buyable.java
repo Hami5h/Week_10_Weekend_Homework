@@ -5,4 +5,5 @@ package com.example.hamishstewart.shoppinbasket.Behaviours;
  */
 
 public interface Buyable {
+    double totalCostPerItem();
 }
