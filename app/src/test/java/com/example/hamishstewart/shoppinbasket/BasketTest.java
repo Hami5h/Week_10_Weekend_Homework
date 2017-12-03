@@ -23,9 +23,9 @@ public class BasketTest {
     @Before
     public void before(){
         basket = new Basket();
-        bread = new Bread("Hovis", 0.95, 3);
-        milk = new Milk("Green", 1.30, 1);
-        honey = new Honey("Solid", 3.20, 1);
+        bread = new Bread("Hovis", 0.95, 5);
+        milk = new Milk("Green", 1.30, 4);
+        honey = new Honey("Solid", 3.20, 5);
     }
 
     @Test
@@ -74,7 +74,7 @@ public class BasketTest {
         basket.addItem(bread);
         basket.addItem(milk);
         basket.addItem(honey);
-        assertEquals(6.40, basket.totalCostBeforeDiscount(), 0.01);
+        assertEquals(25.95, basket.totalCostBeforeDiscount(), 0.01);
     }
 
     @Test
@@ -82,7 +82,25 @@ public class BasketTest {
         basket.addItem(bread);
         basket.addItem(milk);
         basket.addItem(honey);
-        assertEquals(6.40, basket.totalCostWithBreadBogofDiscount(), 0.01);
+        assertEquals(24.05, basket.totalCostWithBogofDiscount(), 0.01);
+    }
+
+    @Test
+    public void tenPercentDiscountNotApllicable() {
+        basket.addItem(bread);
+        basket.addItem(honey);
+        assertEquals(18.85, basket.totalCostWithTenPercentDiscount(), 0.01);
+    }
+
+    @Test
+    public void canGetTenPercentDiscount() {
+        basket.addItem(bread);
+        basket.addItem(milk);
+        basket.addItem(honey);
+        assertEquals(25.95, basket.totalCostBeforeDiscount(), 0.01);
+        assertEquals(24.05, basket.totalCostWithBogofDiscount(), 0.01);
+        assertEquals(21.645, basket.totalCostWithTenPercentDiscount(), 0.01);
+
     }
 
 

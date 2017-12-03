@@ -46,11 +46,24 @@ public class Basket {
         return total;
     }
 
-    public double totalCostWithBreadBogofDiscount() {
+    public double totalCostWithBogofDiscount() {
         double total = 0;
         for (Buyable item : goods) {
-            double cost = item.totalCostPerItem();
+            double cost = item.totalCostPerItemWithDiscount();
             total += cost;
+        }
+        return total;
+    }
+
+    public double totalCostWithTenPercentDiscount() {
+        double total = 0;
+        if (totalCostWithBogofDiscount() < 20.00) {
+            total = totalCostWithBogofDiscount();
+        } else {
+            if (totalCostWithBogofDiscount() >= 20.00); {
+                double discount = totalCostWithBogofDiscount() * 0.1;
+                total = totalCostWithBogofDiscount() - discount;
+            }
         }
         return total;
     }

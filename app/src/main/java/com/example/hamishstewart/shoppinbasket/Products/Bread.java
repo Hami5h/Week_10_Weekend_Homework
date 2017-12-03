@@ -17,21 +17,21 @@ public class Bread extends Product implements Buyable, Discountable {
     @Override
     public double totalCostPerItem() {
         double noDiscountCost = this.price * this.quantity;
-        return noDiscountCost- totalBogofDiscount();
+        return noDiscountCost;
     }
 
 
-//    public double totalCostPerItemWithDiscount() {
-//        int x = this.quantity;
-//        double bogofCost = 0;
-//        if (x <= 1) {
-//            bogofCost = this.price;
-//        } else {
-//            if (x >= 2) bogofCost = this.price * this.quantity / 2;
-//        }
-//
-//        return totalCostPerItem() - totalBogofDiscount();
-//    }
+    public double totalCostPerItemWithDiscount() {
+        int x = this.quantity;
+        double bogofCost = 0;
+        if (x <= 1) {
+            bogofCost = this.price;
+        } else {
+            if (x >= 2) bogofCost = this.price * this.quantity / 2;
+        }
+
+        return totalCostPerItem() - totalBogofDiscount();
+    }
 
     @Override
     public double totalBogofDiscount() {

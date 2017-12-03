@@ -18,4 +18,9 @@ public class Milk extends Product implements Buyable{
         double cost = this.price * this.quantity;
         return cost;
     }
+
+    @Override
+    public double totalCostPerItemWithDiscount() {
+        return totalCostPerItem();
+    }
 }
