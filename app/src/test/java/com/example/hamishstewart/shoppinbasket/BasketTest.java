@@ -99,7 +99,7 @@ public class BasketTest {
         basket.addItem(honey);
         assertEquals(25.95, basket.totalCostBeforeDiscount(), 0.01);
         assertEquals(24.05, basket.totalCostWithBogofDiscount(), 0.01);
-        assertEquals(21.645, basket.totalCostWithTenPercentDiscount(), 0.01);
+        assertEquals(20.645, basket.totalCostWithTenPercentDiscount(), 0.01);
 
     }
 

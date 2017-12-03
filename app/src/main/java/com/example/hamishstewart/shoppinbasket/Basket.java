@@ -62,7 +62,7 @@ public class Basket {
         } else {
             if (totalCostWithBogofDiscount() >= 20.00); {
                 double discount = totalCostWithBogofDiscount() * 0.1;
-                total = totalCostWithBogofDiscount() - discount;
+                total = Math.round((totalCostWithBogofDiscount() - discount) * 100.0) / 100.0;
             }
         }
         return total;
