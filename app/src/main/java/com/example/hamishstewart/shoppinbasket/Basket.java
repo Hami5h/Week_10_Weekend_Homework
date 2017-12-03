@@ -68,4 +68,10 @@ public class Basket {
         return total;
     }
 
+    public double totalCostWithTwoPercentLoyaltyDiscount() {
+        double discount = totalCostWithTenPercentDiscount() * 0.02;
+        double total = Math.round((totalCostWithTenPercentDiscount() - discount) * 100.0) / 100.0;
+        return total;
+    }
+
 }
