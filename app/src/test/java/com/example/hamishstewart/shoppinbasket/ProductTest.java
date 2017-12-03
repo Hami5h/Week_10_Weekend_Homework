@@ -29,6 +29,7 @@ public class ProductTest {
 
     @Test
     public void getTotalCostPerItem(){
+        bread = new Bread("Hovis", 0.95, 2);
         assertEquals(1.90, bread.totalCostPerItem(), 0.01);
     }
 
